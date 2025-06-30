@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precious Phone Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(120deg, #000000, #b22222);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #343a40;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('store-banner.jpg') center/cover no-repeat;
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .search-bar {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 80%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .categories {
+      text-align: center;
+      margin: 2rem;
+    }
+    .categories button {
+      background: #b22222;
+      color: white;
+      border: none;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .store-section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .phone-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .phone-card:hover {
+      transform: scale(1.05);
+    }
+    .phone-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    .phone-card h3 {
+      margin: 1rem 0 0.5rem;
+    }
+    .phone-card p {
+      font-weight: bold;
+      color: #b22222;
+    }
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta button {
+      background: #b22222;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta button:hover {
+      background: #8b1a1a;
+    }
+    footer {
+      background: #1f1f1f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📱 Precious Phone Store</h1>
+    <p>Your one-stop shop for quality phones in Nigeria</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Phones</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Top Deals on the Best Phones</h2>
+    <p>Shop now and enjoy exclusive discounts, fast delivery, and excellent customer service!</p>
+  </section>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search for phones..." onkeyup="searchPhones(this.value)" />
+  </div>
+
+  <div class="categories">
+    <button onclick="filterPhones('all')">All</button>
+    <button onclick="filterPhones('apple')">Apple</button>
+    <button onclick="filterPhones('samsung')">Samsung</button>
+    <button onclick="filterPhones('infinix')">Infinix</button>
+    <button onclick="filterPhones('tecno')">Tecno</button>
+    <button onclick="filterPhones('xiaomi')">Xiaomi</button>
+    <button onclick="filterPhones('itel')">Itel</button>
+  </div>
+
+  <section class="store-section" id="products">
+    <div class="phone-card apple">
+      <img src="iphone14.jpg" alt="iPhone 14 Pro">
+      <h3>iPhone 14 Pro</h3>
+      <p>₦980,000</p>
+    </div>
+    <div class="phone-card samsung">
+      <img src="samsung-s23.jpg" alt="Samsung Galaxy S23">
+      <h3>Samsung Galaxy S23</h3>
+      <p>₦850,000</p>
+    </div>
+    <div class="phone-card infinix">
+      <img src="infinix-zero.jpg" alt="Infinix Zero 30">
+      <h3>Infinix Zero 30</h3>
+      <p>₦250,000</p>
+    </div>
+    <div class="phone-card tecno">
+      <img src="tecno-camon.jpg" alt="Tecno Camon 20">
+      <h3>Tecno Camon 20</h3>
+      <p>₦210,000</p>
+    </div>
+    <div class="phone-card xiaomi">
+      <img src="xiaomi-12.jpg" alt="Xiaomi 12 Pro">
+      <h3>Xiaomi 12 Pro</h3>
+      <p>₦600,000</p>
+    </div>
+    <div class="phone-card itel">
+      <img src="itel-a60.jpg" alt="Itel A60">
+      <h3>Itel A60</h3>
+      <p>₦75,000</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <button onclick="window.location.href='mailto:adeshinajoseph7@gmail.com'">Order Now</button>
+  </div>
+
+  <footer id="contact">
+    <p>© 2025 Precious Phone Store | Designed by Adeshina Ayomide Precious</p>
+    <p>Contact: 09067889113 | adeshinajoseph7@gmail.com</p>
+  </footer>
+
+  <script>
+    function filterPhones(category) {
+      const cards = document.querySelectorAll('.phone-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(category) ? 'block' : 'none';
+        }
+      });
+    }
+
+    function searchPhones(query) {
+      const cards = document.querySelectorAll('.phone-card');
+      query = query.toLowerCase();
+      cards.forEach(card => {
+        const name = card.querySelector('h3').innerText.toLowerCase();
+        card.style.display = name.includes(query) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
